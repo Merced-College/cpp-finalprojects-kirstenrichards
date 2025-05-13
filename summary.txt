@@ -1,3 +1,9 @@
+Kirsten Richards
+CPSC-25: Final Project
+Due Date: 03/13/2025
+
+                                Project Summary
+    
     For this final project, I have began to create the outline of my Arduino-based pet 
 simulator using C++. So far, I have created my Pet.h file and Pet.cpp file. I used a 
 class called "Pet" to store the pet's data, such as hunger, thirst, happiness, and 
