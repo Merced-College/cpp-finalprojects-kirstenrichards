@@ -81,7 +81,7 @@ void Pet::sleep() {
     happiness = std::min(happiness + 20, 100); 
     hunger = std::min(hunger + 20, 100); 
     thirst = std::min(thirst + 20, 100); 
-    enqueueAction( name + " has gone to bed!  ( -.-) zzZ "); // add action to queue
+    enqueueAction( name + " has gone to bed!  (-.-) zzZ "); // add action to queue
 }
 
 // ouputs the pet's status to the LCD or serial monitor
