@@ -3,9 +3,8 @@
 // Due Date: 03/13/2025
 
 #include "Pet.h"
-// #include <Arduino.h>
 #include <iostream> // standard input/ output
-#include <chrono> 
+#include <chrono> // CGPT
 
 /* ChatGPT helped me set up the Clock and TimePoint functions to track the time for my
    time, action, and progression algorithms. */

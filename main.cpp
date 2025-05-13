@@ -15,6 +15,7 @@ int main() {
     std::string name;
     std::cout << "enter a name for your pet: ";
     std::getline(std::cin, name);
+    std::cout << std::endl;
     // set the pet's name
     myPet.setName(name);
     std::cout << "your pet's name is " << myPet.getName() << ". great choice!" << std::endl;
