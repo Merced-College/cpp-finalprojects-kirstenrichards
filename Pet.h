@@ -35,9 +35,9 @@ class Pet {
         int level; // (1 = beginner, 100 = expert)
 
         // 5th data structure (TimePoint)
-        TimePoint lastAction;  // stores the last time an action was performed CGPT
-        TimePoint lastProgress; // stores the last time the pet's state changed CGPT
-        TimePoint lastUpdate;  // stores the last time the pet's state was updated CGPT
+        TimePoint lastAction;  // stores the last time an action was performed // CGPT
+        TimePoint lastProgress; // stores the last time the pet's state changed // CGPT
+        TimePoint lastUpdate;  // stores the last time the pet's state was updated //CGPT
     public: 
         // constructor to initialize the pet object
         Pet(); 
