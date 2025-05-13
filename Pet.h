@@ -1,3 +1,7 @@
+// Kirsten Richards
+// CPSC-25: Final Project
+// Due Date: 03/13/2025
+
 #ifndef PET_H
 #define PET_H
 

@@ -1,3 +1,7 @@
+// Kirsten Richards
+// CPSC-25: Final Project
+// Due Date: 03/13/2025
+
 #include "Pet.h"
 // #include <Arduino.h>
 #include <iostream> // standard input/ output
