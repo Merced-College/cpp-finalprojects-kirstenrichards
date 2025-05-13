@@ -2,9 +2,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build pet simulator",
+            "label": "build",
             "type": "shell",
-            "command": "g++",
+            "command": "/usr/bin/g++",
             "args": [
                 "-g",
                 "main.cpp",
@@ -16,7 +16,7 @@
             "problemMatcher": [
                 "$gcc"
             ],
-            "detail": "Build the pet simulator project"
+            "detail": "Generated task by VS Code"
         },
         {
             "type": "cppbuild",
