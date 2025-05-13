@@ -5,8 +5,6 @@
 #ifndef PET_H
 #define PET_H
 
-// #include <Arduino.h>  // for arduino functions
-// #include "LiquidCrystal.h"  // for arduino LCD output
 #include <iostream>  // for standard terminal input/output
 #include <queue>
 #include <string>
