@@ -33,6 +33,7 @@ int main() {
         // prompt the user to input their choice
         std::cout << "enter your choice: ";
         std::cin >> choice;
+        std::cout << std::endl;
 
         // proccess the user's choice
         switch (choice) {
@@ -45,8 +46,10 @@ int main() {
             default: std::cout << "invalid choice. please try again." << std::endl; break;
         }
 
-        // 
+        // processes and displays the pet's chosen action
         myPet.actionAlg();
+        
+        
         myPet.progressionAlg();
 
         // update after each action

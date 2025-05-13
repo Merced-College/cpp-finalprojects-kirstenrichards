@@ -1,16 +1,16 @@
 #include "Pet.h"
 // #include <Arduino.h>
 #include <iostream> // standard input/ output
-#include <chrono>
+#include <chrono> 
 
 /* ChatGPT helped me set up the Clock and TimePoint functions to track the time for my
    time, action, and progression algorithms. */
-using Clock = std::chrono::steady_clock; 
-using TimePoint = std::chrono::time_point<Clock>;
+using Clock = std::chrono::steady_clock; // CGPT
+using TimePoint = std::chrono::time_point<Clock>; // CGPT
 
 // constructor initializes the pet object with default values
 Pet::Pet() : hunger(0), thirst(0), happiness(100), sleepiness(0), level(1) {
-                auto now = Clock::now();
+                auto now = Clock::now(); // CGPT
                 lastUpdate = now;
                 lastAction = now;
                 lastProgress = now;
@@ -18,8 +18,8 @@ Pet::Pet() : hunger(0), thirst(0), happiness(100), sleepiness(0), level(1) {
 
 // update the pet's state
 void Pet::update() {
-    auto now = Clock::now();
-    std::chrono::duration<double> elapsed = now - lastUpdate;
+    auto now = Clock::now(); // CGPT
+    std::chrono::duration<double> elapsed = now - lastUpdate; // CGPT
     if (elapsed.count() >= 1.0) { // update every second
         timeAlg(); // call the time algorithm
         lastUpdate = now; // update the last update time
@@ -49,25 +49,25 @@ void Pet::play() {
     hunger = std::min(hunger + 20, 100); 
     thirst = std::min(thirst + 20, 100); 
     sleepiness = std::min(sleepiness + 5, 100); 
-    enqueueAction( name + " has played!"); // add action to queue
+    enqueueAction( name + " has played!  \(^_^)/ "); // add action to queue
 }
 /* FEED the pet and the pet's hunger decreases by 20,
    the pet's thirst increases by 10,
    and the pet's happiness increases by 5,
    and the pet's sleepiness increases by 10. (min at 0 & max at 100)*/
 void Pet::eat() {
-    hunger = std::max(hunger - 20, 0); 
+    hunger = std::max(hunger - 20, 0);
     thirst = std::min(thirst + 10, 100); 
     happiness = std::min(happiness + 5, 100);
     sleepiness = std::min(sleepiness + 10, 100);
-    enqueueAction( name + " has eaten!"); // add action to queue
+    enqueueAction( name + " has eaten!  (•w•) "); // add action to queue
 }
 /* GIVE THE PET WATER and the pet's thirst decreases by 20, 
    and the pet's happiness increases by 5. (min at 0 & max at 100)*/
 void Pet::drink() {
     thirst = std::max(thirst - 20, 0);
     happiness = std::min(happiness + 5, 100);
-    enqueueAction( name + " had a drink!"); // add action to queue
+    enqueueAction( name + " had a drink!  (•ᴥ•) "); // add action to queue
 }
 /* PUT THE PET TO BED and the pet's sleepiness decreases by 100,
    the pet's happiness increases by 20,
@@ -78,7 +78,7 @@ void Pet::sleep() {
     happiness = std::min(happiness + 20, 100); 
     hunger = std::min(hunger + 20, 100); 
     thirst = std::min(thirst + 20, 100); 
-    enqueueAction( name + " has gone to bed!"); // add action to queue
+    enqueueAction( name + " has gone to bed!  ( -.-) zzZ "); // add action to queue
 }
 
 // ouputs the pet's status to the LCD or serial monitor
@@ -118,10 +118,18 @@ void Pet::actionAlg() {
 
 // tracks the pet's progress through the game via a level system
 void Pet::progressionAlg() {
-    if (level < 100) {
-        level ++;
-        // announces the pet's level up
-        std::cout << name + " has leveled up to level " << level << "!" << std::endl;
-    }
 
+    auto now = Clock::now(); // gets the current time
+    std::chrono::duration<double> elapsed = now - lastProgress; 
+    // checks if 30 seconds have passed since the last level-up
+    if (elapsed.count() >= 30.0) { // 30 second cooldown required to level up (increasing difficulty)
+        // sets more specific conditions for the pet to level up (increasing difficulty)
+        // the pet's happiness must be above 90, and the hunger, thirst, and sleepiness must be below 15
+        // max level is 100
+        if (happiness > 90 && hunger < 15 && thirst < 15 && sleepiness < 15 && level < 100) {
+            level++;
+            std::cout << name + " has leveled up to level " << level << "!\n" << std::endl;
+            lastProgress = now; // reset the cooldown timer
+        }
+    }
 }

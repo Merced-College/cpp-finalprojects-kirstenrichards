@@ -1,0 +1,17 @@
+Kirsten Richards
+CPSC-25: Final Project
+Due Date: 03/13/2025
+
+                                Project Summary
+    
+    For this final project, I have created an interactive pet simulator using C++. I used a
+class called "Pet" to store the pet's data, such as hunger, thirst, happiness, sleepiness, 
+and level. The action functions and algorithms, such as play, eat, sleep, and drink, are 
+stored in the Pet.cpp file. Upon start-up, you will be prompted to create a pet and assign it
+with a name. Then, you will be able to choose an action (from a list of options), which 
+corresponds to the Pet.cpp action functions. Additionally, you will be given the option to 
+check your pet's status, which displays a list of your pet's data (as defined in the Pet 
+class). The Pet's status is affected by time (Ex. As time passes, your pet will grow hungrier
+and more tired). I used the chrono library *{with the help of ChatGPT}*, to track the time as
+it passes and update your pet's status accordingly. Lastly, I chose to implement a basic level 
+system to track your pet's progress throughout the game. 
