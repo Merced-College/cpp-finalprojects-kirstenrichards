@@ -49,7 +49,7 @@ void Pet::play() {
     hunger = std::min(hunger + 20, 100); 
     thirst = std::min(thirst + 20, 100); 
     sleepiness = std::min(sleepiness + 5, 100); 
-    enqueueAction( name + " has played!  \(^_^)/ "); // add action to queue
+    enqueueAction( name + " has played!  (^_^) "); // add action to queue
 }
 /* FEED the pet and the pet's hunger decreases by 20,
    the pet's thirst increases by 10,

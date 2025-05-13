@@ -21,14 +21,18 @@ class Pet {
     // (between 0 and 100)
     private:
 
+        // 2nd data structure (string)
         std::string name; // pet's name
+        // 3rd data structure (queue)
         std::queue<std::string> actionQueue; // queue to store pet's actions
+        // 4th data structure (integers)
         int hunger; // (0 = full, 100 = starving)
         int thirst; // (0 = hydrated, 100 = dehydrated)
         int happiness; // (0 = sad, 100 = happy)
         int sleepiness; // (0 = awake, 100 = asleep)
         int level; // (1 = beginner, 100 = expert)
 
+        // 5th data structure (TimePoint)
         TimePoint lastAction;  // stores the last time an action was performed CGPT
         TimePoint lastProgress; // stores the last time the pet's state changed CGPT
         TimePoint lastUpdate;  // stores the last time the pet's state was updated CGPT
